@@ -1,0 +1,78 @@
+.dashboard-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.card p {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.dashboard-details {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.details-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.details-section h2 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.details-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details-section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.details-section li:last-child {
+  border-bottom: none;
+}
+
+.details-section li span {
+  font-weight: bold;
+  color: #e74c3c; /* Red for low stock */
+}
+
+.details-section:last-child li span {
+  color: #2ecc71; /* Green for order totals */
+}
