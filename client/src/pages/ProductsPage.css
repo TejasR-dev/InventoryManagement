@@ -1,91 +1,185 @@
 .products-page {
-  padding: 20px;
-  max-width: 1000px;
+  padding: 32px 24px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.products-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.products-table th,
-.products-table td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-}
-
-.products-table th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-.products-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.products-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-.products-table button {
-  margin-right: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
 }
 
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.025em;
 }
 
 .add-btn {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 15px;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 10px 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
 .add-btn:hover {
-  background-color: #218838;
+  background-color: var(--primary-hover);
 }
 
 .product-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  background-color: #f9f9f9;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 32px;
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  max-width: 600px;
+}
+
+.product-form h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .product-form input,
 .product-form textarea {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.product-form button {
-  padding: 10px;
-  font-size: 16px;
+.product-form input:focus,
+.product-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.product-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.product-form button[type="submit"] {
+  padding: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
   cursor: pointer;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--success);
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
 }
 
-.product-form button:hover {
-  background-color: #0056b3;
+.product-form button[type="submit"]:hover {
+  background-color: var(--success-hover);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.products-table th {
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.products-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.products-table tr:last-child td {
+  border-bottom: none;
+}
+
+.products-table tr:nth-child(even) {
+  background-color: var(--bg-app);
+}
+
+.products-table tr:hover {
+  background-color: rgba(241, 245, 249, 0.5);
+}
+
+.products-table button {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.products-table td button:first-child {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+.products-table td button:first-child:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.products-table td button:last-child {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+
+.products-table td button:last-child:hover {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+/* Status Badges */
+.status-pending,
+.status-completed,
+.status-shipped,
+.status-cancelled {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-completed {
+  background-color: var(--success-light);
+  color: var(--success);
 }

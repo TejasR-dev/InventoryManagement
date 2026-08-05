@@ -2,40 +2,77 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 0 20px;
-  color: white;
+  background-color: var(--bg-surface);
+  padding: 0 24px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 64px;
 }
+
 .navbar-brand a {
-  color: white;
+  color: var(--primary);
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  transition: opacity 0.2s ease;
 }
+
+.navbar-brand a:hover {
+  opacity: 0.8;
+}
+
 .navbar-links {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
+  height: 100%;
 }
+
+.navbar-links li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .navbar-links li a {
-  color: white;
+  color: var(--text-secondary);
   text-decoration: none;
-  padding: 1rem;
-  display: block;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
+
 .navbar-links li a:hover {
-  background-color: #555;
+  color: var(--primary);
+  background-color: var(--primary-light);
 }
+
 .logout-btn {
   background: none;
   border: none;
-  color: white;
+  color: var(--text-secondary);
   cursor: pointer;
-  font-size: 1rem;
-  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
+
 .logout-btn:hover {
-  background-color: #d9534f;
+  color: var(--danger);
+  background-color: var(--danger-light);
 }
